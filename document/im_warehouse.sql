@@ -1,6 +1,7 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
+USE `im_warehouse`;
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -20,8 +21,8 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `items` (
   `id` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
   `category` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `colm1` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `colm1` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `colm2` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `colm3` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,

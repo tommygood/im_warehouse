@@ -1,9 +1,9 @@
 <?php
 
 /*呼叫資料庫*/
-$host = 'localhost';
+$host = 'mysql_im_warehouse';
 $user = 'root';
-$pass = '';
+$pass = 'jim_tsai';
 $db = 'im_warehouse';
 $conn = mysqli_connect($host, $user, $pass) or die('Error with MySQL connection');
 mysqli_query($GLOBALS['conn'], "SET NAMES utf8");
