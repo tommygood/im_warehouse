@@ -1,0 +1,22 @@
+version : '3'
+
+services :
+  server :
+    image : php:apache
+    ports :
+      - 8890:80
+    container_name : server_im_warehouse
+    restart: always
+    volumes :
+      - ./im_warehouse:/var/www/html
+  db :
+    image: mysql:5.7
+    container_name: mysql_im_warehouse
+    volumes:
+      - /var/www/im_warehouse/db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: jim_tsai
+      MYSQL_DATABASE: im_warehouse
+      MYSQL_USER: im_warehouse
+      MYSQL_PASSWORD: jim_tsai
